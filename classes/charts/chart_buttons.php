@@ -1,0 +1,2 @@
+<h1 class="bold"><?php echo(get_string('charts', 'local_lessonanalytics'))?></h1>
+<button onclick="eu_click()" id="eu_chart_button" class="btn-primary mb-2 mr-2 p-2 eu_chart_button"><?php echo(get_string('eu_chart_s', 'local_lessonanalytics')) ?></button>

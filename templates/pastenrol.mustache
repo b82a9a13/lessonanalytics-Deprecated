@@ -1,0 +1,33 @@
+<h2 class="bold">{{title}}</h2>
+<form id="pastenrol">
+    <p>You can select dates you want to see the enrolments for.</p>
+    <div class="d-flex mb-3">
+        <p class="mr-2 ml-2 pt-2">Start Date:</p>
+        <input type="date" name="startdate" id="pestartdate" value="{{startdate}}">
+        <p class="mr-2 ml-2 pt-2">End Date:</p>
+        <input type="date" name="enddate" id="peenddate" value="{{enddate}}">
+        <button type="submit" name="Submit" class="btn-primary">Filter</button>
+    </div>
+</form>
+<table class='table table-bordered table-striped table-hover'>
+    <thead id="pastenrol_thead">
+        {{#headings}}
+        <tr>
+                <th scope="col" class='px-2 c-pointer' onclick="headerClicked('pastenrol',0)" sort="asc"><span class="d-flex">{{0}} <span class="ml-1" id="pastenrol_thead_0">&uarr;</span></span></th>
+                <th scope="col" class='px-2 c-pointer' onclick="headerClicked('pastenrol',1)" sort><span class="d-flex">{{1}} <span class="ml-1" id="pastenrol_thead_1"></span></span></th>
+                <th scope="col" class='px-2 c-pointer' onclick="headerClicked('pastenrol',2)" sort><span class="d-flex">{{2}} <span class="ml-1" id="pastenrol_thead_2"></span></span></th>
+                <th scope="col" class='px-2 c-pointer' onclick="headerClicked('pastenrol',3)" sort><span class="d-flex">{{3}} <span class="ml-1" id="pastenrol_thead_3"></span></span></th>
+        </tr>
+        {{/headings}}
+    </thead>
+    <tbody id="pastenrol_tbody">
+        {{#data}}
+            <tr>
+                <td scope="row" class='px-2'>{{0}}</td>
+                <td class="px-2"><a href="window.location.href=./../../../course/view.php?id={{5}}">{{1}}</a></td>
+                <td class="px-2"><a href="window.location.href=./../../../user/profile.php?id={{4}}">{{2}}</a></td>
+                <td class="px-2">{{3}}</td>
+            </tr>
+        {{/data}}
+    </tbody>
+</table>

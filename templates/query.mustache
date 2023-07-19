@@ -1,0 +1,37 @@
+<br><br>
+<h1 class="bold">{{title}}</h1>
+<p>{{info}}</p>
+<form value="queryform" id="queryform">
+    <div id="usernamediv" class="d-flex">
+        <h2 class="w-25">{{username}}</h2>
+        <input name='username' id="username" placeholder="Username">
+        <h2 id="usernameerror" class="text-danger"></h2>
+    </div><br>
+    <div id="surnamediv" class="d-flex">
+        <h2 class="w-25">{{surname}}</h2>
+        <input name="surname" id="surname" placeholder="Surname">
+        <h2 id="surnameerror" class="text-danger"></h2>
+    </div><br>
+    <div id="firstnamediv" class="d-flex">
+        <h2 class="w-25">{{firstname}}</h2>
+        <input name="firstname" id="firstname" placeholder="Firstname">
+        <h2 id="firstnameerror" class="text-danger"></h2>
+    </div><br>
+    <div id="emaildiv" class="d-flex">
+        <h2 class="w-25">{{email}}</h2>
+        <input name="email" id="email" placeholder="Email">
+        <h2 id="emailerror" class="text-danger"></h2>
+    </div><br>
+    <div id="citydiv" class="d-flex">
+        <h2 class="w-25">{{city}}</h2>
+        <input name="city" id="city" placeholder="City/Town" type="text">
+        <h2 id="cityerror" class="text-danger"></h2>
+    </div><br>
+    <div id="companydiv" class="d-flex">
+        <h2 class="w-25">{{company}}</h2>
+        <input type="text" placeholder="Company" name="company" id="company">
+        <h2 id="companyerror" class="text-danger"></h2>
+        <button type="submit" name="submit" class="btn-primary" id="submit">{{filter}}</button>
+    </div>
+</form>
+<h1 id="queryupdate" style="display: none;"></h1>

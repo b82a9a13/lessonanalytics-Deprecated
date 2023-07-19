@@ -1,0 +1,21 @@
+<h2 class="bold">{{title}}</h2>
+<table class='table table-bordered table-striped table-hover'>
+    <thead id="groups_thead">
+        {{#headings}}
+        <tr>
+                <th scope="col" class='px-2 c-pointer' onclick="headerClicked('groups',0)" sort="asc"><span class="d-flex">{{0}}<span class="ml-1" id="groups_thead_0">&uarr;</span></span></th>
+                <th scope="col" class='px-2 c-pointer' onclick="headerClicked('groups',1)" sort><span class="d-flex">{{1}}<span class="ml-1" id="groups_thead_1"></span></span></th>
+                <th scope="col" class='px-2 c-pointer' onclick="headerClicked('groups',2)" sort><span class="d-flex">{{2}}<span class="ml-1" id="groups_thead_2"></span></span></th>
+        </tr>
+        {{/headings}}
+    </thead>
+    <tbody id="groups_tbody">
+        {{#data}}
+            <tr>
+                <td scope="row" class='px-2'>{{0}}</td>
+                <td class="px-2"><a href="window.location.href=./../../../course/view.php?id={{3}}">{{1}}</a></td>
+                <td class="px-2">{{2}}</td>
+            </tr>
+        {{/data}}
+    </tbody>
+</table>

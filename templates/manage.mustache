@@ -1,0 +1,13 @@
+<h1 class="bold">{{pluginname}}</h1>
+<div class="individual-section">
+    <h2>Tracked Courses List</h2>
+    <p id="showorhide" style="cursor: pointer;" class="text-primary">Show List</p>
+    <div id="courselist" style="display: none;">
+        {{#courses}}
+            <p><b>{{fullname}}</b></p>
+        {{/courses}}
+    </div>
+    <input type="button" value="Add Courses" class="btn btn-primary" onclick="location.href='{{addlessonsurl}}'">
+    <input type="button" value="Remove Courses" class="btn btn-primary" onclick="location.href='{{removelessonsurl}}'">
+</div>
+<br><br>

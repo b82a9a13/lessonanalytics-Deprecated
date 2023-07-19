@@ -1,0 +1,208 @@
+<br><br>
+<div>
+    <h1>{{search_al}}</h1>
+    <p>{{used_archive}}</p>
+    <a onclick="document.getElementById('uploadcsv').style.display = 'block'">Click here to upload a csv for user data.</a>
+    <p style="color: {{csvcolor}};">{{csvresponse}}</p>
+    <div id="uploadcsv" style="display: none;">
+        <form action="./classes/inc/csvfile.inc.php" method="POST" enctype="multipart/form-data">
+            <input type="file" name="csvfile">
+            <input type="submit" name="submit" class="btn-primary">
+        </form>
+    </div>
+    <form id="archivedform">
+        <div class="d-flex">
+            <h2 class="w-25">{{username}}</h2>
+            <input type="text" name="fusername" placeholder="{{username}}" id="fusername">
+            <h2 id="fusernameerror" class="text-danger"></h2>
+        </div>
+        <br>
+        <div class="d-flex">
+            <h2 class="w-25">{{lastname}}</h2>
+            <input type="text" name="flastname" placeholder="{{lastname}}" id="flastname">
+            <h2 id="flastnameerror" class="text-danger"></h2>
+        </div>
+        <br>
+        <div class="d-flex">
+            <h2 class="w-25">{{firstname}}</h2>
+            <input type="text" name="ffirstname" placeholder="{{firstname}}" id="ffirstname">
+            <h2 id="ffirstnameerror" class="text-danger"></h2>
+        </div>
+        <br>
+        <div class="d-flex">
+            <h2 class="w-25">{{email}}</h2>
+            <input type="text" name="femail" placeholder="{{email}}" id="femail">
+            <h2 id="femailerror" class="text-danger"></h2>
+        </div>
+        <br>
+        <a class="text-primary"style="cursor:pointer;padding-bottom:2rem;margin-bottom:1rem;" onclick="archived_show_more()" id="archived_show_more">Show more...</a>
+        <br>
+        <div style="display: none;" id="archived_more_section">
+            <div class="d-flex">
+                <h2 class="w-25">{{postcode}}</h2>
+                <input type="text" name="postcode" placeholder="{{postcode}}" id="postcode">
+                <h2 id="postcodeerror" class="text-danger"></h2>
+            </div>
+            <br>
+            <div class="d-flex">
+                <h2 class="w-25">{{dob}}</h2>
+                <input type="date" name="dob" placeholder="{{dob}}" id="dob">
+                <button type="button" class="btn-primary ml-1" onclick="resetdate(['dob'])">Clear Date</button>
+            </div>
+            <br>
+            <div class="d-flex">
+                <h2 class="w-25">{{unique_ln}}</h2>
+                <input type="text" name="ulnumber" placeholder="{{unique_ln}}" id="ulnumber">
+                <h2 id="ulnumbererror" class="text-danger"></h2>
+            </div>
+            <br>
+            <div class="d-flex">
+                <h2 class="w-25">{{learn_rn}}</h2>
+                <input type="text" name="lrnumber" placeholder="{{learn_rn}}" id="lrnumber">
+                <h2 id="lrnumbererror" class="text-danger"></h2>
+            </div>
+            <br>
+            <div class="d-flex">
+                <h2 class="w-25">{{aim_sn}}</h2>
+                <input type="text" name="asnumber" placeholder="{{aim_sn}}" id="asnumber">
+                <h2 id="asnumbererror" class="text-danger"></h2>
+            </div>
+            <br>
+            <div class="d-flex">
+                <h2 class="w-25">{{learn_ar}}</h2>
+                <input type="text" name="lareference" placeholder="{{learn_ar}}" id="lareference">
+                <h2 id="lareferenceerror" class="text-danger"></h2>
+            </div>
+            <br>
+            <div class="d-flex">
+                <h2 class="w-25">{{learn_at}}</h2>
+                <input type="text" name="latitle" placeholder="{{learn_at}}" id="latitle">
+                <h2 id="latitleerror" class="text-danger"></h2>
+            </div>
+            <br>
+            <div class="d-flex">
+                <h2 class="w-25">{{standard_c}}</h2>
+                <select name="standardcode" id="standardcode">
+                    <option default value="">Choose a standard</option>
+                    <option value="78">78 - Level 3 Digital Marketer</option>
+                    <option value="101">101 - Level 2 Retailer</option>
+                    <option value="104">104 - Level 5 Operations or Departmental Manager</option>
+                    <option value="105">105 - Level 3 Team Leader or Supervisor</option>
+                    <option value="111">111 - Level 2 Supply Chain Warehouse Operative</option>
+                    <option value="120">120 - Level 3 Travel Consultant</option>
+                    <option value="140">140 - Level 3 Retail Team Leader</option>
+                    <option value="147">147 - Level 4 Retail Manager</option>
+                    <option value="177">177 - Level 2 Baker</option>
+                    <option value="190">190 - Level 6 HR Consultant Partner</option>
+                    <option value="191">191 - Level 3 HR Support</option>
+                    <option value="196">196 - Level 3 Business Administrator</option>
+                    <option value="249">249 - Level 2 Science Manufacturing Operative</option>
+                    <option value="253">253 - Level 4 Regulatory Compliance Officer</option>
+                    <option value="261">261 - Level 2 Trade Supplier</option>
+                    <option value="278">278 - Level 3 Customer Service Specialist</option>
+                    <option value="311">311 - Level 6 Buyer to Buyer Sales Professional</option>
+                    <option value="348">348 - Level 4 Marketing Manager</option>
+                    <option value="369">369 - Level 4 Sales Executive</option>
+                    <option value="401">401 - Level 4 Assessor Coach</option>
+                    <option value="402">402 - Level 5 Learning and Skills Teacher</option>
+                    <option value="403">403 - Level 3 Learning Mentor</option>
+                    <option value="439">439 - Level 3 Digital Support Technician</option>
+                    <option value="458">458 - Level 4 Buying and Merchandising</option>
+                    <option value="485">485 - Level 5 Assistant Buyer and Assistant Merchandiser</option>
+                    <option value="602">602 - Level 4 Quality Practitioner</option>
+                </select>
+                <h2 id="standardcodeerror" class="text-danger"></h2>
+            </div>
+            <br>
+            <div class="d-flex">
+                <h2 class="w-25">{{learn_sd}}</h2>
+                <h3 class="d-flex align-items-center ml-1 mr-1">From</h3>
+                <input type="date" name="lstartdate" placeholder="{{learn_sd}}" id="lstartdate" onChange="dateChange('lstartdate')">
+                <h3 class="d-flex align-items-center ml-1 mr-1">To</h3>
+                <input type="date" name="lstartdateto" placeholder="{{learn_sd_to}}" id="lstartdateto" disabled>
+                <button type="button" class="btn-primary ml-1" onclick="resetdate(['lstartdate','lstartdateto'])">Clear Dates</button>
+            </div>
+            <br>
+            <div class="d-flex">
+                <h2 class="w-25">{{learn_ped}}</h2>
+                <h3 class="d-flex align-items-center ml-1 mr-1">From</h3>
+                <input type="date" name="lpenddate" placeholder="{{learn_ped}}" id="lpenddate" onChange="dateChange('lpenddate')">
+                <h3 class="d-flex align-items-center ml-1 mr-1">To</h3>
+                <input type="date" name="lpenddateto" placeholder="{{learn_ped_to}}" id="lpenddateto" disabled>
+                <button type="button" class="btn-primary ml-1" onclick="resetdate(['lpenddate','lpenddateto'])">Clear Dates</button>
+            </div>
+            <br>
+            <div class="d-flex">
+                <h2 class="w-25">{{comp_stat}}</h2>
+                <select name="compstatus" id="compstatus">
+                    <option default value="">Choose a status</option>
+                    <option value="1">1 - In learning</option>
+                    <option value="2">2 - Successful Completion</option>
+                    <option value="3">3 - Leaver non achiever</option>
+                    <option value="6">6 - On a break in learning</option>
+                </select>
+                <h2 id="compstatuserror" class="text-danger"></h2>
+            </div>
+        </div>
+        <br>
+        <button type="submit" name="submit" class="btn btn-primary ml-1 w-25">{{search}}</button>
+        <button type="button" class="btn btn-primary ml-1 w-25" onclick="resetfields()">Clear All</button>
+    </form>
+    <div id="archiveerror" style="display: none;">
+        <h3 class="text-danger">Invalid inputs are highlighted in red!</h3>
+    </div>
+</div>
+<h2 id="archivetableempty" class="text-danger"></h2>
+<div id="archivetable" style="display: none;">
+    <table class='table table-bordered table-striped table-hover'>
+        <thead id="archivetable_thead">
+            <tr>
+                <th class="c-pointer" onclick="headerClickedArchive('archivetable',0)" sort="asc"><span class="d-flex">#<span class="ml-1" id="archivetable_thead_0">&uarr;</span></span></th>
+                <th class="c-pointer" onclick="headerClickedArchive('archivetable',1)" sort><span class="d-flex">{{username}}<span class="ml-1" id="archivetable_thead_1"></span></span></th>
+                <th class="c-pointer" onclick="headerClickedArchive('archivetable',2)" sort><span class="d-flex">{{lastname}}<span class="ml-1" id="archivetable_thead_2"></span></span></th>
+                <th class="c-pointer" onclick="headerClickedArchive('archivetable',3)" sort><span class="d-flex">{{firstname}}<span class="ml-1" id="archivetable_thead_3"></span></span></th>
+                <th class="c-pointer" onclick="headerClickedArchive('archivetable',4)" sort><span class="d-flex">{{email}}<span class="ml-1" id="archivetable_thead_4"></span></span></th>
+                <th>
+                    <table class="archivemulti" id="archivetable_multi">
+                    <tr class="archivemulti">
+                    <th style="width: 14%;" class="c-pointer" onclick="headerClickedArchive('archivetable',5)" sort><span class="d-flex">Aim Sequence Number<span class="ml-1" id="archivetable_thead_5"></span></span></th>
+                    <th style="width: 14%;" class="c-pointer" onclick="headerClickedArchive('archivetable',6)" sort><span class="d-flex">Learning Aim Reference<span class="ml-1" id="archivetable_thead_6"></span></span></th>
+                    <th style="width: 14%;" class="c-pointer" onclick="headerClickedArchive('archivetable',7)" sort><span class="d-flex">Learning Aim Title<span class="ml-1" id="archivetable_thead_7"></span></span></th>
+                    <th style="width: 14%;" class="c-pointer" onclick="headerClickedArchive('archivetable',8)" sort><span class="d-flex">Learning Start Date<span class="ml-1" id="archivetable_thead_8"></span></span></th>
+                    <th style="width: 14%;" class="c-pointer" onclick="headerClickedArchive('archivetable',9)" sort><span class="d-flex">Learning Planned End Date<span class="ml-1" id="archivetable_thead_9"></span></span></th>
+                    <th style="width: 14%;" class="c-pointer" onclick="headerClickedArchive('archivetable',10)" sort><span class="d-flex">Completion State<span class="ml-1" id="archivetable_thead_10"></span></span></th>
+                    <th style="width: 14%;" class="c-pointer" onclick="headerClickedArchive('archivetable',11)" sort><span class="d-flex">Standard Code<span class="ml-1" id="archivetable_thead_11"></span></span></th>
+                    </tr>
+                    </table>
+                </th>
+                <th class="c-pointer" onclick="headerClickedArchive('archivetable',12)" sort><span class="d-flex">{{postcode}}<span class="ml-1" id="archivetable_thead_12"></span></span></th>
+                <th class="c-pointer" onclick="headerClickedArchive('archivetable',13)" sort><span class="d-flex">{{dob}}<span class="ml-1" id="archivetable_thead_13"></span></span></th>
+                <th class="c-pointer" onclick="headerClickedArchive('archivetable',14)" sort><span class="d-flex">{{unique_ln}}<span class="ml-1" id="archivetable_thead_14"></span></span></th>
+                <th class="c-pointer" onclick="headerClickedArchive('archivetable',15)" sort><span class="d-flex">{{learn_rn}}<span class="ml-1" id="archivetable_thead_15"></span></span></th>
+            </tr>
+        </thead>
+        <tbody id="archivetable_tbody">
+        </tbody>
+    </table>
+    <div id="pagination" class="d-flex">
+        <button type="button" onclick="prevpage()" class="btn-primary mr-1">Prev Page</button>
+        <input type="text" id="pagenum" style="width: 15px;" value="1">
+        <h3 id="paginationtext"></h3>
+        <button type="button" onclick="nextpage()" class="btn-primary ml-1">Next Page</button>
+    </div>
+    <div class="d-flex mt-1">
+        <button type="button" onclick="downloadcsv()" class="btn-primary">Download as CSV</button>
+    </div>
+</div>
+<style>
+    .archivemulti{
+        margin: 0;
+        padding: 0;
+    }
+    #paginationtext{
+        height: 100%;
+        vertical-align: middle;
+        margin: 0;
+        padding: 0;
+    }
+</style>

@@ -1,0 +1,23 @@
+<h2 class="bold">{{title}}</h2>
+<table class='table table-bordered table-striped table-hover'>
+    <thead id="ctable_thead">
+        <tr>
+            <th scope='col' class='px-2 c-pointer' onclick="headerClicked('ctable',0)" sort="asc"><span class="d-flex">#<span class="ml-1" id="ctable_thead_0">&uarr;</span></span></th>
+            <th scope='col' class='px-2 c-pointer' onclick="headerClicked('ctable',1)" sort><span class="d-flex">{{learner}}<span class="ml-1" id="ctable_thead_1"></span></span></th>
+            <th scope='col' class='px-2 c-pointer' onclick="headerClicked('ctable',2)" sort><span class="d-flex">{{company}}<span class="ml-1" id="ctable_thead_2"></span></span></th>
+            <th scope='col' class='px-2 c-pointer' onclick="headerClicked('ctable',3)" sort><span class="d-flex">{{date}}<span class="ml-1" id="ctable_thead_3"></span></span></th>
+            <th scope='col' class='px-2 c-pointer' onclick="headerClicked('ctable',4)" sort><span class="d-flex">{{last_access}}<span class="ml-1" id="ctable_thead_4"></span></span></th>
+        </tr>
+    </thead>
+    <tbody id="ctable_tbody">
+    {{#data}}
+        <tr>
+            <td scope='row' class='px-2'>{{0}}</td>
+            <td class='px-2'><a href="window.location.href=./../../../user/profile.php?id={{5}}">{{2}}</a></td>
+            <td class='px-2'>{{3}}</td>
+            <td class='px-2'>{{1}}</td>
+            <td class='px-2'>{{4}}</td>
+        </tr>
+    {{/data}}
+    </tbody>
+</table>

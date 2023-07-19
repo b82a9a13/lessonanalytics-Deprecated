@@ -1,0 +1,23 @@
+<form value="querytable" id="querytable" style="display: none;">
+<table class='table table-bordered table-striped table-hover'>
+    <thead id="querytable_thead">
+        <tr>
+            {{#headings}}
+                <th scope='col' class='px-2 c-pointer' onclick="headerClickedQuery('querytable',0)" sort="asc"><span class="d-flex">{{0}}<span class="ml-1" id="querytable_thead_0">&uarr;</span></span></th>
+                <th scope='col' class='px-2 c-pointer' onclick="headerClickedQuery('querytable',1)" sort><span class="d-flex">{{1}}<span class="ml-1" id="querytable_thead_1"></span></span></th>
+                <th scope='col' class='px-2 c-pointer' onclick="headerClickedQuery('querytable',2)" sort><span class="d-flex">{{2}}<span class="ml-1" id="querytable_thead_2"></span></span></th>
+                <th scope='col' class='px-2 c-pointer' onclick="headerClickedQuery('querytable',3)" sort><span class="d-flex">{{3}}<span class="ml-1" id="querytable_thead_3"></span></span></th>
+                <th scope='col' class='px-2 c-pointer' onclick="headerClickedQuery('querytable',4)" sort><span class="d-flex">{{4}}<span class="ml-1" id="querytable_thead_4"></span></span></th>
+                <th scope='col' class='px-2 c-pointer' onclick="headerClickedQuery('querytable',5)" sort><span class="d-flex">{{5}}<span class="ml-1" id="querytable_thead_5"></span></span></th>
+                <th scope='col' class='px-2 c-pointer' onclick="headerClickedQuery('querytable',6)" sort><span class="d-flex">{{6}}<span class="ml-1" id="querytable_thead_6"></span></span></th>
+            {{/headings}}
+        </tr>
+    </thead>
+    <tbody id="querytable_tbody">
+    </tbody>
+</table>
+<input hidden id="total" name="total" value="">
+<h1 id="querytableerror" style="display: none;" class="bold text-danger"></h1>
+<h1 id="querytablesuccess" style="display: none;" class="bold text-success"></h1>
+<button type="submit" name="updatesubmit" class="btn-primary">{{button}}</button>
+</form>

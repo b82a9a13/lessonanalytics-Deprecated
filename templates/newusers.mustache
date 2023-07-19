@@ -1,0 +1,31 @@
+<h2 class="bold">{{title}}</h2>
+<form id="newusers">
+    <p>You can select the dates you want to see new user history for.</p>
+    <div class="d-flex mb-3">
+        <p class="mr-2 ml-2 pt-2">Start Date:</p>
+        <input type="date" name="startdate" id="nustartdate" value="{{startdate}}">
+        <p class="mr-2 ml-2 pt-2">End Date:</p>
+        <input type="date" name="enddate" id="nuenddate" value="{{enddate}}">
+        <button type="submit" name="Submit" class="btn-primary">Filter</button>
+    </div>
+</form>
+<table class='table table-bordered table-striped table-hover'>
+    <thead id="newusers_thead">
+        {{#headings}}
+            <tr>
+                <th scope="col" class="px-2 c-pointer" onclick="headerClicked('newusers',0)" sort="asc"><span class="d-flex">{{0}}<span class="ml-1" id="newusers_thead_0">&uarr;</span></span></th>
+                <th scope="col" class="px-2 c-pointer" onclick="headerClicked('newusers',1)" sort><span class="d-flex">{{1}}<span class="ml-1" id="newusers_thead_1"></span></span></th>
+                <th scope="col" class="px-2 c-pointer" onclick="headerClicked('newusers',2)" sort><span class="d-flex">{{2}}<span class="ml-1" id="newusers_thead_2"></span></span></th>
+            </tr>
+        {{/headings}}
+    </thead>
+    <tbody id="newusers_tbody">
+        {{#data}}
+            <tr>
+                <td scope="row" class="px-2">{{0}}</td>
+                <td class="px-2"><a href="window.location.href=./../../../user/profile.php?id={{3}}">{{1}}</a></td>
+                <td class="px-2">{{2}}</td>
+            </tr>
+        {{/data}}
+    </tbody>
+</table>
